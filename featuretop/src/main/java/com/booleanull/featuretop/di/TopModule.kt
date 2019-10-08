@@ -1,4 +1,4 @@
-package com.booleanull.news.di
+package com.booleanull.featuretop.di
 
 import com.booleanull.corenetworkimpl.NetworkRepository
 import dagger.Module
@@ -7,7 +7,7 @@ import dagger.Provides
 @Module
 class TopModule {
 
-    @Provides
     @TopScope
-    fun provideNetworkRepository() = NetworkRepository()
+    @Provides
+    internal fun provideNetworkRepository() = NetworkRepository()
 }

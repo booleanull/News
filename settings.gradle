@@ -1,1 +1,1 @@
-include ':app', ':core_network_api', ':corenetworkapi', ':corenetworkimpl', ':core'
+include ':app', ':core_network_api', ':corenetworkapi', ':corenetworkimpl', ':core', ':featuretop', ':featurefavorite', ':featurenews'

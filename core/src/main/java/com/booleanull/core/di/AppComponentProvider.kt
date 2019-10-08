@@ -1,4 +1,4 @@
-package com.booleanull.news.di
+package com.booleanull.core.di
 
 interface AppComponentProvider {
 

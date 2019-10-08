@@ -1,11 +1,10 @@
 package com.booleanull.news
 
 import android.app.Application
-import android.content.Context
-import com.booleanull.news.di.AppComponent
-import com.booleanull.news.di.AppComponentProvider
-import com.booleanull.news.di.AppModule
-import com.booleanull.news.di.DaggerAppComponent
+import com.booleanull.core.di.AppComponent
+import com.booleanull.core.di.AppComponentProvider
+import com.booleanull.core.di.AppModule
+import com.booleanull.core.di.DaggerAppComponent
 
 class MyApplication : Application(), AppComponentProvider {
 
@@ -19,15 +18,5 @@ class MyApplication : Application(), AppComponentProvider {
                 .build()
         }
         return appComponent
-    }
-}
-
-object AppInjectHelper {
-    fun provideAppComponent(applicationContext: Context): AppComponent {
-        return if (applicationContext is AppComponentProvider) {
-            (applicationContext as AppComponentProvider).provideAppComponent()
-        } else {
-            throw IllegalStateException("The application context you have passed does not implement AppComponentProvider")
-        }
     }
 }
