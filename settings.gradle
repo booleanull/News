@@ -1,1 +1,1 @@
-include ':app', ':core_network_api', ':corenetworkapi'
+include ':app', ':core_network_api', ':corenetworkapi', ':corenetworkimpl', ':core'
